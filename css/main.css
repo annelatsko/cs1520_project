@@ -1,0 +1,39 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC;
+    overflow: hidden;
+}
+
+nav {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+li a {
+  display: block;
+  color: #111;
+  text-decoration: none;
+  padding: 8px 16px;
+  float: right;
+}
+
+li a.active {
+    background-color: #ff8000;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #ffc299;
+    color: white;
+}
+
+.home_header {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  float: right;
+}
+
+body {
+  background-color: #F5F5DC;
+}
