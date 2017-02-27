@@ -38,6 +38,7 @@ h1 {
 body {
   background-color: #F5F5DC;
   font-family:Arial, Helvetica, sans-serif;
+  height:100%;
 }
 
 #photos {
@@ -66,7 +67,6 @@ footer {
   text-align: center;
   display: inline-block;
   width: 100%;
-  height: 100%;
 }
 
 #chaotic_good_list {
@@ -112,61 +112,24 @@ footer {
 .lamaga {
   position: relative;
   display: inline-block;
-  width: auto;
-  height: auto;
 }
 
-#annie_overlay {
+.overlay {
   position: absolute;
-  bottom: 0;
+  bottom: 100;
   left: 10;
   right: 10;
-  background-color: #008CBA;
+  top: -10;
+  background-color: #ff6600;
   overflow: hidden;
   width: 0;
-  height: auto;
   transition: .5s ease;
 }
 
-.lamaga:hover #annie_overlay {
+.lamaga:hover .overlay {
   width: 100%;
   height: 20%;
-  float: left;
-}
-
-#ellen_overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #008CBA;
   overflow: hidden;
-  width: 0;
-  height: auto;
-  transition: .5s ease;
-}
-
-.lamaga:hover #ellen_overlay {
-  width: 100%;
-  height: 20%;
-}
-
-#jonny_overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 0;
-  height: auto;
-  transition: .5s ease;
-  display: inline-block;
-}
-
-.lamaga:hover #jonny_overlay {
-  width: 100%;
-  height: 20%;
 }
 
 .text {
