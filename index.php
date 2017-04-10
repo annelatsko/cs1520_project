@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
 	<head>
@@ -10,9 +10,10 @@
 		<header>
 			<nav>
 				<ul>
+					<li id="connect"><a href="connect.php">Connect</a></li>
+					<li id="connect"><a href="signin.php">Sign In</a></li>
 					<li><a class="active" href="#home">Home</a></li>
 					<li><a href="riley.html">Riley</a></li>
-					<li><a href="reasons_for_aesthetic_offense.html">Why She Ugly</a></li>
 					<li><a href="lamaga.html">Latsko Machete Gang</a></li>
 					<li><a href="https://natboehm.github.io/SteelHacks2017/">Pepe the Hypoallergenic Therapy Dog</a></li>
 				</ul>
@@ -36,6 +37,7 @@
 		</section>
 
 		<footer>
+		<a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a></li>
 	    <div id="company_name">Latsko Machete Gang</div> <!-- these div tags feel wrong-->
 	    <div id="company_location">Cleveland, OH</div>
 	    <div id="company_email">lamaga@gmail.com</div>
