@@ -1,3 +1,8 @@
+<?php 
+	include 'php/dbConnect.php'; 
+	session_start();
+?>
+
 <!doctype html>
 
 <html>
@@ -10,11 +15,17 @@
 		<header>
 			<nav>
 				<ul>
-					<li id="connect"><a href="connect.php">Connect</a></li>
-					<li id="connect"><a href="signin.php">Sign In</a></li>
+					<?php if (!isset($_SESSION['user'])) { echo $_SESSION; ?>
+					<li class="session"><a href="signin.php">Sign In</a></li>
+					<li class="session"><a href="register.php">Register</a></li>
+					<?php } else if(isset($_SESSION['user'])!="") { 
+						echo '<li style="color:#111; font-size:20px; float:left; display:block; padding: 8px 16px">Welcome, ' . $_SESSION['user'] . '!</li>';
+					?>
+					<li class="session"><a href="logout.php?logout">Sign Out</a></li>
+					<?php } ?>
 					<li><a class="active" href="#home">Home</a></li>
-					<li><a href="riley.html">Riley</a></li>
-					<li><a href="lamaga.html">Latsko Machete Gang</a></li>
+					<li><a href="riley.php">Riley</a></li>
+					<li><a href="lamaga.php">Latsko Machete Gang</a></li>
 					<li><a href="https://natboehm.github.io/SteelHacks2017/">Pepe the Hypoallergenic Therapy Dog</a></li>
 				</ul>
 			</nav>
@@ -37,10 +48,9 @@
 		</section>
 
 		<footer>
-		<a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a></li>
 	    <div id="company_name">Latsko Machete Gang</div> <!-- these div tags feel wrong-->
 	    <div id="company_location">Cleveland, OH</div>
-	    <div id="company_email">lamaga@gmail.com</div>
+	    <div id="company_email">og.lamaga@gmail.com</div>
     </footer>
 	</body>
 

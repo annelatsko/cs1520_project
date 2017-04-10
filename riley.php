@@ -1,3 +1,7 @@
+<?php 
+	include 'php/dbConnect.php'; 
+	session_start();
+?>
 <!DOCTYPE html>
 
 <html>
@@ -7,17 +11,23 @@
 	</head>
 	<body>
 		<header>
-			<nav>
-				<ul>
-					<li><a href="connect.php">Connect</a></li>
-					<li><a href="signin.php">Sign In</a></li>
-					<li><a href="index.php">Home</a></li>
-					<li><a class="active" href="riley.html">Riley</a></li>
-					<li><a href="lamaga.html">Latsko Machete Gang</a></li>
-					<li><a href="https://natboehm.github.io/SteelHacks2017/">Pepe the Hypoallergenic Therapy Dog</a></li>
-				</ul>
-			</nav>
-		</header>
+      <nav>
+        <ul>
+          <?php if (!isset($_SESSION['user'])) { ?>
+          <li class="session"><a href="signin.php">Sign In</a></li>
+          <li class="session"><a href="register.php">Register</a></li>
+          <?php } else if(isset($_SESSION['user'])!="") { 
+          	echo '<li style="color:#111; font-size:20px; float:left; display:block; padding: 8px 16px">Welcome, ' . $_SESSION['user'] . '!</li>';
+					?>
+          <li class="session"><a href="logout.php?logout">Sign Out</a></li>
+          <?php } ?>
+          <li><a href="index.php">Home</a></li>
+          <li><a class="active" href="#riley">Riley</a></li>
+          <li><a href="lamaga.php">Latsko Machete Gang</a></li>
+          <li><a href="https://natboehm.github.io/SteelHacks2017/">Pepe the Hypoallergenic Therapy Dog</a></li>
+        </ul>
+      </nav>
+    </header>
 		<main>
 			<h1>Riley: Not Too Skilled at Being a Dog</h1>
 			<div class="flexcontainer">

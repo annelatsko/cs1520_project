@@ -1,3 +1,5 @@
+<!-- please see http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html for how I figured out how to protect against sql injections -->
+
 <?php
 	ob_start();
 	session_start();
@@ -10,7 +12,6 @@
 
 	if ( isset($_POST['btn-signup']) ) {
   
-	  // clean user inputs to prevent sql injections
 	  $name = trim($_POST['name']);
 	  $name = strip_tags($name);
 	  $name = htmlspecialchars($name);
@@ -81,19 +82,25 @@
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="css/main.css" />
-		<nav>
-			<ul>
-				<li id="connect"><a class="active" href="#connect">Connect</a></li>
-				<li id="connect"><a href="signin.php">Sign In</a></li>
-				<li><a href="index.php">Home</a></li>
-				<li><a href="riley.html">Riley</a></li>
-				<li><a href="lamaga.html">Latsko Machete Gang</a></li>
-				<li><a href="https://natboehm.github.io/SteelHacks2017/">Pepe the Hypoallergenic Therapy Dog</a></li>
-			</ul>
-		</nav>
 	</head>
-
+		
 	<body>
+		<header>
+			<nav>
+				<ul>
+					<?php if (!isset($_SESSION['user'])) { ?>
+					<li class="session"><a href="signin.php">Sign In</a></li>
+					<li class="session"><a class="active" href="#register">Register</a></li>
+					<?php } else if(isset($_SESSION['user'])!="") { ?>
+					<li class="session"><a href="logout.php?logout">Sign Out</a></li>
+					<?php } ?>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="riley.php">Riley</a></li>
+					<li><a href="lamaga.php">Latsko Machete Gang</a></li>
+					<li><a href="https://natboehm.github.io/SteelHacks2017/">Pepe the Hypoallergenic Therapy Dog</a></li>
+				</ul>
+			</nav>
+		</header>
 
 		<main>
 			<div id="ugly_images">
