@@ -58,89 +58,56 @@
   </head>
 <body>
   <header>
-      <nav>
-        <ul>
-          <?php if (!isset($_SESSION['user'])) { ?>
-          <li class="session"><a class="active" href="#signin">Sign In</a></li>
-          <li class="session"><a href="register.php">Register</a></li>
-          <?php } else if(isset($_SESSION['user'])!="") { ?>
-          <li class="session"><a href="logout.php?logout">Sign Out</a></li>
-          <?php } ?>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="riley.php">Riley</a></li>
-          <li><a href="lamaga.php">Latsko Machete Gang</a></li>
-          <li><a href="https://natboehm.github.io/SteelHacks2017/">Pepe the Hypoallergenic Therapy Dog</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav>
+      <ul>
+        <?php if (!isset($_SESSION['user'])) { ?>
+        <li class="session"><a class="active" href="#signin">Sign In</a></li>
+        <li class="session"><a href="register.php">Register</a></li>
+        <?php } else if(isset($_SESSION['user'])!="") { ?>
+        <li class="session"><a href="logout.php?logout">Sign Out</a></li>
+        <?php } ?>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="riley.php">Riley</a></li>
+        <li><a href="lamaga.php">Latsko Machete Gang</a></li>
+        <li><a href="https://natboehm.github.io/SteelHacks2017/">Pepe the Hypoallergenic Therapy Dog</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="container">
-
-   <div id="login-form">
-      <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-      
-       <div class="col-md-12">
-          
-           <div class="form-group">
-               <h2 class="">Sign In.</h2>
-              </div>
-          
-           <div class="form-group">
-               <hr />
-              </div>
-              
-              <?php
-     if ( isset($errMSG) ) {
-      
-      ?>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
       <div class="form-group">
-               <div class="alert alert-danger">
-      <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
-                  </div>
-               </div>
-                  <?php
-     }
-     ?>
-              
-              <div class="form-group">
-               <div class="input-group">
-                  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-               <input type="email" name="email" class="form-control" placeholder="Your Email" value="<?php echo $email; ?>" maxlength="40" />
-                  </div>
-                  <span class="text-danger"><?php echo $emailError; ?></span>
-              </div>
-              
-              <div class="form-group">
-               <div class="input-group">
-                  <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-               <input type="password" name="pass" class="form-control" placeholder="Your Password" maxlength="15" />
-                  </div>
-                  <span class="text-danger"><?php echo $passError; ?></span>
-              </div>
-              
-              <div class="form-group">
-               <hr />
-              </div>
-              
-              <div class="form-group">
-               <button type="submit" class="btn btn-block btn-primary" name="btn-login">Sign In</button>
-              </div>
-              
-              <div class="form-group">
-               <hr />
-              </div>
-              
-              <div class="form-group">
-               <a href="register.php">Sign Up Here...</a>
-              </div>
-          
+        <h2 class="">Sign In.</h2>
+      </div>   
+      <?php if ( isset($errMSG) ) { ?>
+        <div class="form-group">
+          <div class="alert alert-danger">
+            <?php echo $errMSG; ?>
           </div>
-     
-      </form>
-      </div> 
-
-  </div>
-
+        </div>
+      <?php } ?>    
+      <div class="form-group">
+        <div class="input-group">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" value="<?php echo $email; ?>" maxlength="40" />
+        </div>
+        <span class="text-danger"><?php echo $emailError; ?></span>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <input type="password" name="pass" class="form-control" placeholder="Your Password" maxlength="15" />
+        </div>
+        <span class="text-danger"><?php echo $passError; ?></span>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-block btn-primary" name="btn-login">Sign In</button>
+      </div>
+      <br>
+      <div class="form-group">
+        Need an account?
+        <a href="register.php">Sign Up Here</a>
+      </div>
+    </div>
+  </form>
 </body>
 </html>
 <?php ob_end_flush(); ?>

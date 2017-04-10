@@ -15,11 +15,11 @@
 		<header>
 			<nav>
 				<ul>
-					<?php if (!isset($_SESSION['user'])) { echo $_SESSION; ?>
+					<?php if (!isset($_SESSION['user'])) { ?>
 					<li class="session"><a href="signin.php">Sign In</a></li>
 					<li class="session"><a href="register.php">Register</a></li>
 					<?php } else if(isset($_SESSION['user'])!="") { 
-						echo '<li style="color:#111; font-size:20px; float:left; display:block; padding: 8px 16px">Welcome, ' . $_SESSION['user'] . '!</li>';
+						echo '<li style="color:#111; font-size:30px; float:left; display:block; padding: 8px 16px">Welcome, ' . $_SESSION['user'] . '!</li>';
 					?>
 					<li class="session"><a href="logout.php?logout">Sign Out</a></li>
 					<?php } ?>
