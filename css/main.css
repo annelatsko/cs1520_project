@@ -123,24 +123,20 @@ footer {
 
 .details {
   position: absolute;
-  bottom: 100;
-  left: 10;
-  right: 10;
-  top: -10;
-  background-color: #ff6600;
-  overflow: hidden;
-  width: 0;
-  transition: .5s ease;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  display: none;
+  color: #FFF;
 }
 
 .lamaga:hover .details {
-  width: 100%;
-  height: 20%;
-  overflow: hidden;
+  display: block;
+  background: rgba(0, 0, 0, .6);
 }
 
 .text {
-  white-space: nowrap; 
   color: white;
   font-size: 20px;
   position: absolute;
@@ -148,6 +144,14 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+.name {
+  color: white;
+  font-size:25px;
+  position: absolute;
+  left: 40%;
+  top: 15%;
 }
 .container {
   text-align: center;
@@ -160,3 +164,72 @@ footer {
 .right {
   float: right;
 }
+
+form {
+  background: -webkit-linear-gradient(bottom, #ff9966, #ff6600 175px);
+  background: -moz-linear-gradient(bottom, #ff9966, #ff6600 175px);
+  background: linear-gradient(bottom, #ff9966, #ff6600 175px);
+  margin: auto;
+  width: 32%;
+  height: 300px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position:relative;
+  top:50px;
+}
+
+input {
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  width: 100px;
+  background: #ff6600;
+  color: #fff;
+  font-family: Tahoma, Geneva, sans-serif;
+  height: 30px;
+  border-radius: 15px;
+  border: 1p solid #999;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input.button:hover {
+  background: #fff;
+  color: #09C;
+}
+
+#reindeer {
+  float:right; 
+  width:32%; 
+  position:relative; 
+  top:-265px;
+}
+
+#hotel {
+  float:left; 
+  width:32%; 
+  position:relative; 
+  top:57px
+}
+

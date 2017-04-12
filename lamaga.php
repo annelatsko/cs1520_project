@@ -33,21 +33,24 @@
 		<h1 style="float:right; font-size:90px; width:100%">Latsko Machete Gang</h1>
 		<div class="container">
 			<div class="lamaga">
-				<img src="images/jonny_and_riley.png" alt="Jonny and Riley" id="jonny">
+				<img src="images/jonny_and_riley.png" alt="Jonny and Riley" id="jonny" class="image">
 				<div class="details">
-					<div class="text">JONNY</div>
+					<div class="name">JONNY</div>
+					<div class="text">"Radical Communist. Reasonable guy. Hmu if u eff with my vision and want to connect and build"</div>
 				</div>
 			</div>
 			<div class="lamaga">
-				<img src="images/annie_and_riley.png" alt="Annie and Riley" id="annie">
+				<img src="images/annie_and_riley.png" alt="Annie and Riley" id="annie" class="image">
 				 <div class="details">
-					<div class="text">ANNIE</div>
+					<div class="name">ANNIE:</div>
+					<div class="text" style="font-family:'Comic Sans MS', cursive, sans-serif">"Graphic design is my passion"</div>
 				</div>
 			</div>
 			<div class="lamaga">
-				<img src="images/ellen_and_riley.png" alt="Ellen and Riley" id="ellen">
+				<img src="images/ellen_and_riley.png" alt="Ellen and Riley" id="ellen" class="image">
 				<div class="details">
-					<div class="text">ELLEN</div>
+					<div class="name">ELLEN:</div>
+					<div class="text">"It's been a rough coupla 22 years || Chilling until proven otherwise."</div>
 				</div>
 			</div>
 		</div>
@@ -56,7 +59,5 @@
 	    <div id="company_location">Cleveland, OH</div>
 	    <div id="company_email">og.lamaga@gmail.com</div>
     </footer> 
-
-  	
 	</body>
 </html>

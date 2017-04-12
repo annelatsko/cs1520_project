@@ -74,40 +74,46 @@
     </nav>
   </header>
 
-  <div class="container">
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-      <div class="form-group">
-        <h2 class="">Sign In.</h2>
-      </div>   
-      <?php if ( isset($errMSG) ) { ?>
+  <div class="signup-block">
+    <img style="position:relative;width:45%;top:70px"src="images/like_the_ugliest.png" alt="why." >
+
+    <div class="container">
+      <form style="float:right;position:relative;width:45%;top:-300px" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
         <div class="form-group">
-          <div class="alert alert-danger">
-            <?php echo $errMSG; ?>
+          <h2 style="font-size:48px">Sign In.</h2>
+        </div>
+        
+        <?php if ( isset($errMSG) ) { ?>
+          <div class="form-group">
+            <div class="alert alert-danger">
+              <?php echo $errMSG; ?>
+            </div>
           </div>
+        <?php } ?>    
+        <div class="form-group">
+          <div class="input-group">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" value="<?php echo $email; ?>" maxlength="40" />
+          </div>
+          <span class="text-danger"><?php echo $emailError; ?></span>
         </div>
-      <?php } ?>    
-      <div class="form-group">
-        <div class="input-group">
-          <input type="email" name="email" class="form-control" placeholder="Your Email" value="<?php echo $email; ?>" maxlength="40" />
+        <br><br>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="password" name="pass" class="form-control" placeholder="Your Password" maxlength="15" />
+          </div>
+          <span class="text-danger"><?php echo $passError; ?></span>
         </div>
-        <span class="text-danger"><?php echo $emailError; ?></span>
-      </div>
-      <div class="form-group">
-        <div class="input-group">
-          <input type="password" name="pass" class="form-control" placeholder="Your Password" maxlength="15" />
+        <br><br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-block btn-primary" name="btn-login">Sign In</button>
         </div>
-        <span class="text-danger"><?php echo $passError; ?></span>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-block btn-primary" name="btn-login">Sign In</button>
-      </div>
-      <br>
-      <div class="form-group">
-        Need an account?
-        <a href="register.php">Sign Up Here</a>
-      </div>
+        <div class="form-group">
+          Need an account?
+          <a href="register.php">Sign Up Here</a>
+        </div>
+      </form>
     </div>
-  </form>
-</body>
+  </div>
+  </body>
 </html>
 <?php ob_end_flush(); ?>
