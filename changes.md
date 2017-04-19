@@ -4,7 +4,7 @@
 
 ### 1. Changes to the home page
 
-The main thing that I changed on the homepage (located at index.php) was that I created a variable to store the path the images, an array that has all of the names of the images, and an array that has all of the alternate descriptions that need to go in an HTML image tag. I then use a for loop in the actual HTML to display all of the images.
+The main thing that I changed on the homepage (located at index.php) was that I created a variable to store the path the images, an array that has all of the names of the images, and an array that has all of the alternate descriptions that need to go in an HTML image tag. I then use a for loop in the actual HTML to display all of the images. In the Gist, it says that I am going to add space between all of the images but it looked bad so I didn't.
 
 ### 2. Changes to the Latsko Machete Gang Page
 
@@ -14,7 +14,7 @@ The next thing that I changed was the hover effect on the Latsko Machete Gang pa
 
 ### 1. Register Page
 
-I replaced the page that used to just have ugly pictures of Riley on it with a page that has an actual purchase, for people to register on this site for basically no reason. This register form takes a person's full name, email address, and a password. The password has to be at least 6 characters, the name has to be at least three characters and only be a combination of letters and spaces, and the email address must contain an "@" sign. When a user hits the submit button, a notification that there were problems with his or her inputs is displayed or a success message is displayed, stating that the user can now sign in. The error messages are specific about what area of the form there's a problem with. There is also a link to the sign in page underneath the submit button.
+I replaced the page that used to just have ugly pictures of Riley on it with a page that has an actual purchase, for people to register on this site for basically no reason. This register form takes a person's full name, email address, and a password. The password has to be at least 6 characters, the name has to be at least three characters and only be a combination of letters and spaces, and the email address must contain an "@" sign. When a user hits the submit button, a notification that there were problems with his or her inputs is displayed or a success message is displayed, stating that the user can now sign in. The error messages are specific about what area of the form there's a problem with. There is also a link to the sign in page underneath the submit button. The password is hashed in the database for extra super secret security.
 
 The database was created using phpMyAdmin. The database is called webdev_project and the table is called uglyStinkers.
 

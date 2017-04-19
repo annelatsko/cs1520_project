@@ -1,15 +1,8 @@
 <!-- please see http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html for how I figured out how to protect against sql injections -->
 
 <?php
-	ob_start();
-	session_start();
-	if( isset($_SESSION['user'])!="" ){
-		header("Location: index.php");
-	}
-	include_once 'php/dbConnect.php';
-
-	$error = false;
-
+	include_once 'php/partial.php';
+	
 	if ( isset($_POST['btn-signup']) ) {
   
 	  $name = trim($_POST['name']);

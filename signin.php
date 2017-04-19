@@ -1,14 +1,5 @@
 <?php
-  ob_start();
-  session_start();
-  require_once 'php/dbConnect.php';
- 
-  if ( isset($_SESSION['user'])!="" ) {
-    header("Location: index.php");
-    exit;
-  }
- 
-  $error = false;
+  include_once 'php/partial.php';
  
   if( isset($_POST['btn-login']) ) { 
   
@@ -33,13 +24,12 @@
       $passError = "Please enter your password.";
     }
     
-    // if there's no error, continue to login
     if (!$error) {
-      $password = hash('sha256', $pass); // password hashing using SHA256
+      $password = hash('sha256', $pass); 
     
       $res=mysql_query("SELECT userId, userName, userPass FROM uglyStinkers WHERE userEmail='$email'");
       $row=mysql_fetch_array($res);
-      $count = mysql_num_rows($res); // if uname/pass correct it returns must be 1 row
+      $count = mysql_num_rows($res); 
      
       if( $count == 1 && $row['userPass']==$password ) {
         $_SESSION['user'] = $row['userName'];
