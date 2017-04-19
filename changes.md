@@ -20,7 +20,7 @@ The database was created using phpMyAdmin. The database is called webdev_project
 
 ### 2. Sign In Page
 
-I added a new page for the user to enter the email address that he or she signed up with, as well as his or her password and sign in. There is also a link that redirects the user directly to the register page if he or she needs an account. When the user hits the sign in button, a few things happen. The first is that he or she is redirected back to the home page. The second is that a welcome message that says "Welcome, <name>!" is shown in the top left of the screen and will appear on every page. The third thing is that the Sign In and Register tabs in the navbar at the top of the screen disappear and are replaced with a single option, the Sign Out tab. 
+I added a new page for the user to enter the email address that he or she signed up with, as well as his or her password and sign in. There is also a link that redirects the user directly to the register page if he or she needs an account. When the user hits the sign in button, a few things happen. The first is that he or she is redirected back to the home page. The second is that a welcome message that says "Welcome, <name>!" is shown in the top left of the screen and will appear on every page. The third thing is that the Sign In and Register tabs in the navbar at the top of the screen disappear and are replaced with a single option, the Sign Out tab. The welcome message in the top lef the of the screen also disappears.
 
 ### 3. Sign Out Button
 
