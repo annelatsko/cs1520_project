@@ -20,8 +20,8 @@ The database was created using phpMyAdmin. The database is called webdev_project
 
 ### 2. Sign In Page
 
-I added a new page for the user to enter the email address that he or she signed up with, as well as his or her password and sign in. There is also a link that redirects the user directly to the register page if he or she needs an account. When the user hits the sign in button, a few things happen. The first is that he or she is redirected back to the home page. The second is that a welcome message that says "Welcome, <name>!" is shown in the top left of the screen and will appear on every page. The third thing is that the Sign In and Register tabs in the navbar at the top of the screen disappear and are replaced with a single option, the Sign Out tab. The welcome message in the top lef the of the screen also disappears.
+I added a new page for the user to enter the email address that he or she signed up with, as well as his or her password and sign in. There is also a link that redirects the user directly to the register page if he or she needs an account. When the user hits the sign in button, a few things happen. The first is that he or she is redirected back to the home page. The second is that a welcome message that says "Welcome, <name>!" is shown in the top left of the screen and will appear on every page. The third thing is that the Sign In and Register tabs in the navbar at the top of the screen disappear and are replaced with a single option, the Sign Out tab. 
 
 ### 3. Sign Out Button
 
-The last thing that I added to the site is a sign out option in the navbar at the top of the page. When a user hits this button, it redirects back to the home page, the sign out option in the navbar disappears, and the Sign In and Register options come back.
+The last thing that I added to the site is a sign out option in the navbar at the top of the page. When a user hits this button, it redirects back to the home page, the sign out option in the navbar disappears, and the Sign In and Register options come back. The welcome message in the top left the of the screen also disappears.
