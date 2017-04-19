@@ -12,4 +12,8 @@ If you click on it after you haven't clicked on it for a super long time, it wil
 
 This project won a minor award. We're not sure what we won yet, so basically we won Schrodinger's Beats Headphones.
 
+### Update on the project award:
+
+We finally got the award that we were promised, however it was super lame (like a pair of Domain.com branded fake glasses? I have real glasses and expired contacts). I hid stuff from my boyfriend and told him that it was a pair of Beats headphones that were stolen from the mail.
+
 

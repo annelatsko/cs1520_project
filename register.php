@@ -44,7 +44,7 @@
 			$count = mysql_num_rows($result);
 			if($count!=0){
 				$error = true;
-				$emailError = "Provided Email is already in use.";
+				$emailError = "This email has already been registered.";
 			}
 		}
 	  if (empty($pass)){
@@ -52,7 +52,7 @@
 	   	$passError = "Please enter password.";
 	  } else if(strlen($pass) < 6) {
 	   	$error = true;
-	   	$passError = "Password must have atleast 6 characters.";
+	   	$passError = "Password must have at least 6 characters.";
 	  }
   	$password = hash('sha256', $pass);
   
@@ -63,7 +63,7 @@
     
 	    if ($res) {
 		    $errTyp = "success";
-		    $errMSG = "Successfully registered, you may sign in now";
+		    $errMSG = "You registered! Go ahead and sign in.";
 		    unset($name);
 		    unset($email);
 		    unset($pass);

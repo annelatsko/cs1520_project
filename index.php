@@ -1,6 +1,10 @@
 <?php 
 	include 'php/dbConnect.php'; 
 	session_start();
+	$imagePath="images/";
+	$imageNames=array("can_u_like_not.png","chillin_under_bureau.png","looking_back.png","magical_girl.png","on_side.png","sleeping.png","sleeping2.png","hoodie_baby.png","wow_wtf.png","bandana.png","warp_tongue.png","distracted_doggo.png");
+	$imageAlts=array("Riley looking salty af.","Riley hiding under a piece of furniture.","Riley looking behind her.","Riley with sparkles.","Riley laying on her side.","Riley dozing.","Riley dozing extra hard.","Riley in a hoodie.","Riley looking surprised and ugly.","Riley in a bandana.","Riley goin' fast.","Riley gettin' distracted");
+	$imageAltCounter = 0;
 ?>
 
 <!doctype html>
@@ -11,7 +15,6 @@
 	</head>
 
 	<body>
-
 		<header>
 			<nav>
 				<ul>
@@ -33,18 +36,11 @@
 		
 		<h1 class="home_header">Riley</h1>
 		<section id="photos">
-		  <img src="images/can_u_like_not.png" alt="Riley looking salty af."/>
-		  <img src="images/chillin_under_bureau.png" alt="Riley hiding under a piece of furniture.">
- 		  <img src="images/looking_back.png" alt="Riley looking behind her.">
-		  <img src="images/magical_girl.png" alt="Riley with sparkles.">
-		  <img src="images/on_side.png" alt="Riley laying on her side.">
-		  <img src="images/sleeping.png" alt="Riley dozing.">
-		  <img src="images/sleeping2.png" alt="Riley dozing extra hard.">
-		  <img src="images/hoodie_baby.png" alt="Riley in a hoodie.">
-		  <img src="images/wow_wtf.png" alt="Riley looking surprised and ugly.">
-		  <img src="images/bandana.png" alt="Riley in a bandana.">
-		  <img src="images/warp_tongue.png" alt="Riley goin' fast.">
-		  <img src="images/distracted_doggo.png" alt="Riley gettin' distracted">
+			<?php 
+				foreach ($imageNames as $image) {
+			    echo '<image src="'. $imagePath . $image . '" alt="' . $imageAlts[$imageAltCounter] . '"/>'; 
+				}
+			?>
 		</section>
 
 		<footer>
