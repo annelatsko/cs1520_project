@@ -16,4 +16,4 @@ This project won a minor award. We're not sure what we won yet, so basically we 
 
 We finally got the award that we were promised, however it was super lame (like a pair of Domain.com branded fake glasses? I have real glasses and expired contacts). I hid stuff from my boyfriend and told him that it was a pair of Beats headphones that were stolen from the mail.
 
-#### Please refer to the file changes.md for information on what has changed since project 2.
+#### Please refer to the file changes.md for information on what has changed since project 1.
